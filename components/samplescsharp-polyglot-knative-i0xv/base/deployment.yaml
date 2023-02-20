@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: samplescsharp-polyglot-knative-i0xv
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:FgnBp-samplescsharp-polyglot-knative-i0xv
+      - image: quay.io/redhat-appstudio/user-workload@sha256:cbbd3e9ac6722ee0951b73329659e9adbd88ba42a06db16bd7f16f8c8ce9f449
         imagePullPolicy: Always
         name: main
         ports:
