@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: samplescsharp-polyglot-knative-i0xv
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: samplescsharp-polyglot-knative-i0xv
+    app.kubernetes.io/part-of: dot-net
+  name: samplescsharp-polyglot-knative-i0xv
+  namespace: phayes1-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: samplescsharp-polyglot-knative-i0xv
+    weight: null
+status: {}

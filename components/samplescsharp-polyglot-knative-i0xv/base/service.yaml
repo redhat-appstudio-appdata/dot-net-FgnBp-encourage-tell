@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: dotnet-deploy
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: samplescsharp-polyglot-knative-i0xv
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: samplescsharp-polyglot-knative-i0xv
+    app.kubernetes.io/part-of: dot-net
+  name: samplescsharp-polyglot-knative-i0xv
+  namespace: phayes1-tenant
+spec:
+  ports:
+  - name: http-8081
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: devfile-dotnet-deploy
+    app.kubernetes.io/instance: samplescsharp-polyglot-knative-i0xv
+  type: LoadBalancer
+status:
+  loadBalancer: {}
