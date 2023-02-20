@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: samplescsharp-polyglot-knative-i0xv
+  namespace: phayes1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:cbbd3e9ac6722ee0951b73329659e9adbd88ba42a06db16bd7f16f8c8ce9f449
+        name: main
+        resources: {}
+status: {}
